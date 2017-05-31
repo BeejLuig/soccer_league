@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+file = File.new("code_sample/sample-input.txt")
+puts file.read
