@@ -1,40 +1,45 @@
 require "spec_helper"
-
-RSpec.describe SoccerLeague::Team do
+require "pry"
+RSpec.describe Team do
 
   describe "instance methods" do
+
     describe "#initialize" do
-      it "instantiates a new Team with a name" do
-        # TODO:
+      before(:context) do
+        @team = Team.new("Bears")
+      end
+      it "initializes a new Team with a name" do
+        expect(@team.name).to eq("Bears")
+      end
+
+      it "initializes a new Team with zero points" do
+        expect(@team.points).to eq(0)
       end
     end
-
-    describe "#name" do
-      it "returns the name of the team" do
-        # TODO:
-      end
-    end
-
   end
 
   describe "class methods" do
 
     describe ".all" do
       it "returns an array of all the teams" do
-        # TODO:
+        expect(Team.all.length).to eq(1)
+        Team.new("Cats")
+        expect(Team.all.length).to eq(2)
       end
     end
 
     describe "find_or_create_by_name" do
       context "if the passed team name doesn't exist" do
         it "creates a new Team and returns it" do
-          # TODO: 
+          team = Team.find_or_create_by_name("Dogs")
+          expect(Team.all[-1]).to eq(team)
         end
       end
 
       context "if the passed team already exists" do
         it "returns the team with the given name" do
-          # TODO:
+          team = Team.find_or_create_by_name("Bears")
+          expect(team).to eq(Team.all.first)
         end
       end
     end
