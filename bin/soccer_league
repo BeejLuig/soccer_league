@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
 require 'pry'
 require_relative '../lib/soccer_league'
-Parser.new.parse("code_sample/sample-input.txt")
+
+CLI.new.call
