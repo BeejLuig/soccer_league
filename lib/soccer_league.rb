@@ -1,7 +1,6 @@
-require "soccer_league/game"
 require "soccer_league/team"
+require "soccer_league/game"
 require "soccer_league/version"
 
-module SoccerLeague
-  # Your code goes here...
-end
+require_relative "../lib/soccer_league/parser"
+require_relative "../lib/soccer_league/cli"
