@@ -14,7 +14,13 @@ class Team
   end
 
   def self.find_or_create_by_name(name)
-    team = self.all.bsearch {|team| name == team.name}
+    team = self.all.find {|team| name == team.name}
     team.nil? ? self.new(name) : team
+  end
+
+  def self.league_rankings
+    @@all.sort do |a, b|
+      a.points == b.points ? a.name <=> b.name : b.points <=> a.points
+    end
   end
 end
