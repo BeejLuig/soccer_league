@@ -1,0 +1,4 @@
+Cats 3, Dogs 2
+Bears 1, Raccoons 1
+Raccoons 3, Cats 2
+Dogs 1, Bears 2
