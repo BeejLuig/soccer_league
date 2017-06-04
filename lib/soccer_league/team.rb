@@ -5,6 +5,7 @@ class Team
 
   def initialize(name)
     @name = name
+    @points = 0
     @@all << self
   end
 
