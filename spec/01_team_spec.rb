@@ -42,6 +42,27 @@ RSpec.describe Team do
           expect(team).to eq(Team.all.first)
         end
       end
+
+    end
+
+    describe "league_rankings" do
+      it "returns teams in order of points, high to low" do
+        points = 0
+        Team.all.each do |team|
+          team.points = points
+          points += 1
+        end
+        expect(Team.league_rankings.first.points).to eq(2)
+        expect(Team.league_rankings.last.points).to eq(0)
+      end
+
+      it "orders teams alphabetically if they have the same number of points" do
+        Team.all.each do |team|
+          team.points = 0
+        end
+        expect(Team.league_rankings.first.name).to eq("Bears")
+        expect(Team.league_rankings.last.name).to eq("Dogs")
+      end
     end
   end
 
