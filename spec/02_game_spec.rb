@@ -4,7 +4,7 @@ RSpec.describe Game do
   describe "instance methods" do
     describe "#initialize" do
       before(:example) do
-        @game = Game.new(%w(Tarantulas 3), %w(FC Awesome 2))
+        @game = Game.new("Tarantulas", 3, "FC Awesome", 2)
       end
       it "initializes with two teams and scores" do
         expect(@game.team_one.name).to eq("Tarantulas")
@@ -16,9 +16,9 @@ RSpec.describe Game do
 
     describe "#play" do
       before(:context) do
-        @team_one_wins = Game.new(%w(A 3), %w(B 2))
-        @team_two_wins = Game.new(%w(C 1), %w(D 3))
-        @teams_tie = Game.new(%w(E 1), %w(F 1))
+        @team_one_wins = Game.new("A", 3, "B", 2)
+        @team_two_wins = Game.new("C", 1, "D", 3)
+        @teams_tie = Game.new("E", 1, "F", 1)
       end
       it "gives 3 points to the winning team" do
         @team_one_wins.play
