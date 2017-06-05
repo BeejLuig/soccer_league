@@ -1,38 +1,26 @@
 # SoccerLeague
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/soccer_league`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to Soccer League! This is a command-line application that calculates the ranking table for a soccer league.
 
 TODO: Delete this and the text above, and describe your gem
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'soccer_league'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install soccer_league
-
 ## Usage
 
-TODO: Write usage instructions here
+To get started, open the terminal and `cd` into this repo's parent directory. Then, type:
+
+`cd soccer_league && bin/soccer_league`
+
+You will be prompted to enter the pathname for a valid file. A sample file is already in the root of this directory, so you can just enter `sample-input.txt`. To use any other file, drop it into the root directory and enter the file name, or enter the full pathname.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+*A note on testing*: If you run the tests out of the box, some will fail due to private methods. Go to `lib/soccer_league/cli.rb` around line 26 and remove the `private` keyword before running `rspec`.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/soccer_league.
+Bug reports and pull requests are welcome on GitHub at https://github.com/BeejLuig/soccer_league.
 
 ## License
 
