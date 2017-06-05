@@ -43,8 +43,8 @@ class Game
 
       # set team name to remainder strings in array
       # in case a team name has more than one word
-      team_one_name = team_one_with_score.join(" ")
-      team_two_name = team_two_with_score.join(" ")
+      team_one = team_one_with_score.join(" ")
+      team_two = team_two_with_score.join(" ")
 
       # instantiate new game with team names and scores
       game = self.new(team_one, team_one_score, team_two, team_two_score)
