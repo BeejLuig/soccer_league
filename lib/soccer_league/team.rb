@@ -19,6 +19,8 @@ class Team
   end
 
   def self.league_rankings
+    # sort by name if points match
+    # otherwise, sort by points
     @@all.sort do |a, b|
       a.points == b.points ? a.name <=> b.name : b.points <=> a.points
     end
