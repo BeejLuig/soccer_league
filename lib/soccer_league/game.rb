@@ -23,15 +23,11 @@ class Game
 
   def self.parse_games(file)
     file.each do |line|
-      begin
         teams = line.split(", ")
         team_one_with_score = teams[0].split(" ")
         team_two_with_score = teams[1].split(" ")
         game = self.new(team_one_with_score, team_two_with_score)
         game.play
-      rescue
-        puts "Sorry, this file isn't formatted correctly! Try running with a different file"
-        abort
       end
     end
   end
