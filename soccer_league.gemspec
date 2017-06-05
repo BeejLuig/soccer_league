@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["BJ Cantlupe"]
   spec.email         = ["bjcantlupe@gmail.com"]
 
-  spec.summary       = %q{An app that reads soccer league data}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{a command-line application that calculates the ranking table for a soccer league.}
+  spec.homepage      = "https://github.com/BeejLuig/soccer_league"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
