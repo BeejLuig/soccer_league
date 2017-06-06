@@ -2,8 +2,6 @@
 
 Welcome to Soccer League! This is a command-line application that calculates the ranking table for a soccer league.
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Usage
 
 To get started, `cd` into this directory, then run:
